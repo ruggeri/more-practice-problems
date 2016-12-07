@@ -10,8 +10,10 @@ end
 
 def run_test(input, expected_output)
   your_output = string_to_integer(input.dup)
-  if your_output != expected_output
-    puts "string_to_integer(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "string_to_integer(#{input.inspect}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end

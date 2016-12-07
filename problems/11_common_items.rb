@@ -17,10 +17,13 @@ end
 def run_test(array1, array2, expected_output)
   your_output = common_items(array1.dup, array2.dup)
   your_sorted_output = your_output.is_a?(Array) ? your_output.sort : your_output
-  if your_sorted_output != expected_output.sort
-    puts "common_items(#{array1.inspect}, #{array2.inspect}) should be #{expected_output.inspect}"
+
+  puts "common_items(#{array1.inspect}, #{array2.inspect}) should be #{expected_output.inspect}"
+  puts "(It's okay to be in a different order)"
+  if your_sorted_output == expected_output.sort
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
-    puts "(Note: if your output is only in a different order, that's okay)"
   end
 end
 

@@ -23,8 +23,10 @@ end
 
 def run_test(string, num_rows, expected_output)
   your_output = column_encoding(string.dup, num_rows)
-  if your_output != expected_output
-    puts "column_encoding(#{string.inspect}, #{num_rows}) should == #{expected_output.inspect}"
+  puts "column_encoding(#{string.inspect}, #{num_rows}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end

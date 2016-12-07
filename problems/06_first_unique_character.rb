@@ -14,11 +14,13 @@ end
 
 def run_test(input, expected_output)
   your_output = first_unique_character(input.dup)
-  if your_output != expected_output
-    puts "first_unique_character(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "first_unique_character(#{input.inspect}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end
 
-run_test("abac", "b")
-run_test("xyz", "x")
+run_test("abac", 1)
+run_test("xyz", 0)
