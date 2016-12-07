@@ -5,7 +5,7 @@
 # strings; otherwise the problem would be too easy. For instance:
 # `"1".to_i` is allowed, but `"12".to_i` is against the rules.
 
-def string_to_integer
+def string_to_integer(string)
 end
 
 def run_test(input, expected_output)

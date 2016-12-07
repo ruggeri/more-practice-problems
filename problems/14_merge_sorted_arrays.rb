@@ -25,7 +25,7 @@ end
 def run_test(array1, array2, expected_output)
   your_output = merge_sorted_arrays(array1.dup, array2.dup)
   if your_output != expected_output
-    puts "merge_sorted_arrays(#{input.inspect}) should == #{expected_output.inspect}"
+    puts "merge_sorted_arrays(#{array1.inspect}, #{array2.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
   end
 end

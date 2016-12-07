@@ -28,9 +28,9 @@ def bulls_and_cows(secret, guess)
 end
 
 def run_test(secret, guess, expected_output)
-  your_output = reverse_vowels(secret.dup, guess.dup)
+  your_output = bulls_and_cows(secret.dup, guess.dup)
   if your_output != expected_output
-    puts "reverse_vowels(#{secret.inspect}, #{guess.inspect}) should == #{expected_output.inspect}"
+    puts "bulls_and_cows(#{secret.inspect}, #{guess.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
   end
 end

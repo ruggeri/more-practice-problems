@@ -22,9 +22,9 @@ def column_encoding(string, num_rows)
 end
 
 def run_test(string, num_rows, expected_output)
-  your_output = reverse_vowels(string.dup, num_rows.dup)
+  your_output = column_encoding(string.dup, num_rows)
   if your_output != expected_output
-    puts "reverse_vowels(#{input.inspect}) should == #{expected_output.inspect}"
+    puts "column_encoding(#{string.inspect}, #{num_rows}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
   end
 end

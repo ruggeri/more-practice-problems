@@ -8,7 +8,7 @@ def add_digits(number)
 end
 
 def run_test(input, expected_output)
-  your_output = add_digits(input.dup)
+  your_output = add_digits(input)
   if your_output != expected_output
     puts "add_digits(#{input.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"

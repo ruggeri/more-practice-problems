@@ -15,10 +15,12 @@ def common_items(array1, array2)
 end
 
 def run_test(array1, array2, expected_output)
-  your_output = reverse_vowels(array1.dup, array2.dup)
-  if your_output.sort != expected_output.sort
-    puts "reverse_vowels(#{array1.inspect}, #{array2.inspect}) should == #{expected_output.inspect}"
+  your_output = common_items(array1.dup, array2.dup)
+  your_sorted_output = your_output.is_a?(Array) ? your_output.sort : your_output
+  if your_sorted_output != expected_output.sort
+    puts "common_items(#{array1.inspect}, #{array2.inspect}) should be #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
+    puts "(Note: if your output is only in a different order, that's okay)"
   end
 end
 

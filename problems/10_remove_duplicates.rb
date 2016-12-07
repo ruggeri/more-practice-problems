@@ -9,7 +9,7 @@
 # creating a new array, we modify the input and remove the items from
 # it.
 
-def remove_duplicates
+def remove_duplicates(array)
 end
 
 def run_test(input, expected_output)

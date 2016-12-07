@@ -9,13 +9,13 @@
 # help to remember that when dividing two integers in Ruby, Ruby always
 # rounds down. For instance: `9/4==2`, and `9%4==1`.
 
-def integer_to_string
+def integer_to_string(integer)
 end
 
 def run_test(input, expected_output)
-  your_output = reverse_vowels(input.dup)
+  your_output = integer_to_string(input)
   if your_output != expected_output
-    puts "reverse_vowels(#{input.inspect}) should == #{expected_output.inspect}"
+    puts "integer_to_string(#{input.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
   end
 end
