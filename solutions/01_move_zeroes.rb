@@ -12,7 +12,7 @@ def move_zeroes(numbers)
   copy_idx = 0
   idx = 0
   while idx < numbers.length
-    if idx != 0
+    if numbers[idx] != 0
       numbers[copy_idx] = numbers[idx]
       copy_idx += 1
     end
@@ -30,9 +30,12 @@ end
 
 def run_test(input, expected_output)
   your_output = move_zeroes(input.dup)
-  if your_output != expected_output
-    puts "move_zeroes(#{input.inspect}) should == #{expected_output.inspect}"
-    puts "You calculated: #{your_output.inspect}"
+  puts "move_zeroes(#{input.inspect}) should == #{expected_output.inspect}"
+
+  if your_output == expected_output
+    puts "PASSED!"
+  else
+    puts "FAILED: You calculated: #{your_output.inspect}"
   end
 end
 

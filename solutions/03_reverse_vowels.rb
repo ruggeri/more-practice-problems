@@ -22,7 +22,7 @@ def reverse_vowels(string)
   string_idx = 0
   while string_idx < string.length
     char = string[string_idx]
-    string[string_idx] = all_vowels.pop if all_vowels.include?(char)
+    string[string_idx] = string_vowels.pop if all_vowels.include?(char)
     string_idx += 1
   end
 
@@ -31,11 +31,13 @@ end
 
 def run_test(input, expected_output)
   your_output = reverse_vowels(input.dup)
-  if your_output != expected_output
-    puts "reverse_vowels(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "reverse_vowels(#{input.inspect}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end
 
-run_test("gizmolina", "gzmiloni")
+run_test("gizmolina", "gazmiloni")
 run_test("xayez", "xeyaz")

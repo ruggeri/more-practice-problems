@@ -25,8 +25,11 @@ end
 
 def run_test(input, expected_output)
   your_output = swap_pairs(input.dup)
-  if your_output != expected_output
-    puts "swap_pairs(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "swap_pairs(#{input.inspect}) should == #{expected_output.inspect}"
+
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end

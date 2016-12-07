@@ -18,7 +18,7 @@ def first_unique_character(string)
       idx2 += 1
     end
 
-    return idx1 if idx2 != string.length
+    return idx1 if idx2 == string.length
 
     idx1 += 1
   end
@@ -29,8 +29,10 @@ end
 
 def run_test(input, expected_output)
   your_output = first_unique_character(input.dup)
-  if your_output != expected_output
-    puts "first_unique_character(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "first_unique_character(#{input.inspect}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end

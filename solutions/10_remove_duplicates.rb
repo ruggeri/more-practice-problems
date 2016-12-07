@@ -12,14 +12,14 @@
 def remove_duplicates(array)
   new_array = []
   idx1 = 0
-  while idx < array.length
+  while idx1 < array.length
     idx2 = 0
-    while idx2 < array.length
-      break if array[idx1] == array[idx2] && idx1 != idx2
+    while idx2 < idx1
+      break if array[idx1] == array[idx2]
       idx2 += 1
     end
 
-    new_array < array[idx1] if idx2 == array.length
+    new_array << array[idx1] if idx2 == idx1
     idx1 += 1
   end
 
@@ -28,8 +28,10 @@ end
 
 def run_test(input, expected_output)
   your_output = remove_duplicates(input.dup)
-  if your_output != expected_output
-    puts "remove_duplicates(#{input.inspect}) should == #{expected_output.inspect}"
+  puts "remove_duplicates(#{input.inspect}) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end

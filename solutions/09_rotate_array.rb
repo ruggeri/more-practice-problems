@@ -26,8 +26,10 @@ end
 
 def run_test(array, k, expected_output)
   your_output = rotate_array(array.dup, k)
-  if your_output != expected_output
-    puts "rotate_array(#{array.inspect}, k.inspect) should == #{expected_output.inspect}"
+  puts "rotate_array(#{array.inspect}, k.inspect) should == #{expected_output.inspect}"
+  if your_output == expected_output
+    puts "PASSED!"
+  else
     puts "You calculated: #{your_output.inspect}"
   end
 end
