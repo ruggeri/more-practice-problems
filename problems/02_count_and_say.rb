@@ -12,7 +12,7 @@ def count_and_say(string)
 end
 
 def run_test(input, expected_output)
-  your_output = count_and_say(input)
+  your_output = count_and_say(input.dup)
   if your_output != expected_output
     puts "count_and_say(#{input.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"

@@ -12,7 +12,7 @@ def move_zeroes(numbers)
 end
 
 def run_test(input, expected_output)
-  your_output = move_zeroes(input)
+  your_output = move_zeroes(input.dup)
   if your_output != expected_output
     puts "move_zeroes(#{input.inspect}) should == #{expected_output.inspect}"
     puts "You calculated: #{your_output.inspect}"
